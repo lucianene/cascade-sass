@@ -1,0 +1,38 @@
+
+.navigation {
+	display: inline-block;
+	width: 100%;
+	input, select {
+		border: 0 !important;
+	}
+}
+
+.nav {
+
+	a, .nav-item {
+		display: block;
+		text-decoration: none;
+		color: inherit;
+		line-height: 2em;
+		min-height: 2em;
+		padding-left: .5em; // same as dividing the font size by 2
+		padding-right: .5em;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&.nav-horizontal li {
+		display: inline-block;
+	}
+
+	// generate sizes
+	@each $nav, $size in $fonts {
+		&.nav-#{$nav} {
+			a, .nav-item {
+				@extend .text-#{$nav};
+			}
+		}
+	}
+
+}

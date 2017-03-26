@@ -1,0 +1,23 @@
+
+.modal__window {
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.7);
+	height: 100%;
+
+	.modal__content {
+		@extend .modern-shadow;
+		background: color('white');
+		padding: 15px;
+		animation-duration: .5s;
+		animation-delay: 0s;
+		margin: 5% auto;
+		max-width: 960px;
+		float: none !important;
+	}
+
+
+}

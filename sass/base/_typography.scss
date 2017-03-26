@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:300,300i,400,400i,500,500i,700,700i');
+
+body {
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 2em;
+	min-height: 2em;
+}
+
+@each $font, $size in $fonts {
+	.text-#{$font} {
+		font-size: $size !important;
+	}
+}
+
+@each $heading, $size in $headings {
+	#{$heading}, .#{$heading} {
+		@extend .text-#{$size}
+	}
+}
+
+@each $font, $size in $fonts {
+	.lh-#{$font} {
+		line-height: $size !important;
+	}
+}
+
+strong, b {
+	font-weight: 500;
+}
+
+hr {
+	width: 100%;
+	margin: 0 0 15px;
+	height: 0;
+	border: 1px solid color('grey');
+	border-top: 0;
+	@include clearfix;
+}
+
+blockquote {
+	background-color: color('grey', 'light');
+	border: 2px dashed color('grey', 'dark');
+	padding: 15px;
+	margin-bottom: 15px;
+}
+
+code {
+	@extend .whitegrey-bg;
+}
+
+/*
+code {
+	border: 2px dashed color('green', 'light');
+	overflow: hidden;
+	clear: both;
+	width: 100%;
+	display: block;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+*/
+
+kbd {
+	background: #111;
+	color: #fff;
+	padding: 0 15px;
+	margin: 0 5px;
+}

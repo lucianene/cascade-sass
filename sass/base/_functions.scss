@@ -1,0 +1,36 @@
+@function color($color, $nuance: 'base') {
+	@if map-has-key($colors, $color) {
+		@if $nuance == 'base' {
+			@return map-get($colors, $color);
+		} @else if $nuance == 'dark' {
+			@return darken(map-get($colors, $color), $colors-dark-percentage);
+		} @else if $nuance == 'light' {
+			@return lighten(map-get($colors, $color), $colors-light-percentage);
+		} @else {
+			@warn "Unknown `#{nuance}`.";
+			@return null;
+		}
+	}
+	@warn "Unknown `#{name}` in $colors.";
+	@return null;
+}
+
+@function font-size($size) {
+	@if map-has-key($fonts, $size) {
+		@return map-get($fonts, $size);
+	}
+	@warn "Unknown `#{size}` in $fonts.";
+	@return null;
+}
+
+@function pxtoem($pixels, $context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}

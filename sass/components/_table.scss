@@ -1,0 +1,26 @@
+
+.table {
+
+	width: 100%;
+	line-height: 2em;
+
+	&.table-stripped {
+		tr:nth-child(odd) td {
+			background-color: color('grey');
+		}
+	}
+
+	td {
+		min-height: 2em;
+		padding-left: .5em; // same as dividing the font size by 2
+		padding-right: .5em;
+	}
+
+	// generate sizes
+	@each $table, $size in $fonts {
+		&.table-#{$table} {
+			@extend .text-#{$table};
+		}
+	}
+
+}

@@ -1,0 +1,21 @@
+@each $index in $spacings {
+
+	/* Margin */
+	.m#{$index}  { margin: #{$index}px; }
+	.mt#{$index} { margin-top: #{$index}px; }
+	.mr#{$index} { margin-right: #{$index}px; }
+	.mb#{$index} { margin-bottom: #{$index}px; }
+	.ml#{$index} { margin-left: #{$index}px; }
+	.mv#{$index} { margin-top: #{$index}px; margin-bottom: #{$index}px; }
+	.mh#{$index} { margin-left: #{$index}px; margin-right: #{$index}px; }
+
+	/* Padding */
+	.p#{$index}  { padding: #{$index}px; }
+	.pt#{$index} { padding-top: #{$index}px; }
+	.pr#{$index} { padding-right: #{$index}px; }
+	.pb#{$index} { padding-bottom: #{$index}px; }
+	.pl#{$index} { padding-left: #{$index}px; }
+	.pv#{$index} { padding-top: #{$index}px; padding-bottom: #{$index}px; }
+	.ph#{$index} { padding-left: #{$index}px; padding-right: #{$index}px; }
+
+}

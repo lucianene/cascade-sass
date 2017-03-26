@@ -1,0 +1,52 @@
+
+
+
+input, select, textarea {
+
+	&.input {
+
+		// default configuration
+		display: block;
+		text-align: left;
+		text-decoration: none;
+		outline: 0;
+		line-height: 0;
+		min-height: 2em;
+		cursor: select;
+		padding-left: .5em; // same as dividing the font size by 2
+		padding-right: .5em;
+		width: 100%;
+		border-radius: 3px;
+		appearance: inherit !important;
+
+		// force inline button
+		&.input-inline {
+			display: inline-block;
+			width: auto;
+		}
+
+		@include border-variant('grey', 'base', '2px');
+		@include color-variant('black', 'light');
+
+		@each $name, $size in $fonts {
+			&.input-#{$name} {
+				@extend .text-#{$name};
+			}
+		}
+
+	}
+
+
+}
+
+select {
+	&.input {
+		line-height: 2em !important;
+	}
+}
+
+textarea {
+	&.input {
+		line-height: 1.5em;
+	}
+}

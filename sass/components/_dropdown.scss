@@ -1,0 +1,35 @@
+
+.dropdown-show {
+	visibility: visible;
+	opacity: 1;
+}
+
+.dropdown-wrap {
+
+	display: table;
+
+	.dropdown {
+		@extend .modern-shadow;
+		background: color('white');
+
+		visibility: hidden;
+		opacity: 0;
+		transition: .1s all;
+		overflow: hidden;
+		position: absolute;
+		display: table;
+		z-index: 9999;
+		&:hover, &:active, &:focus {
+			@extend .dropdown-show;
+		}
+	}
+
+	.btn-dropdown {
+		&:active, &:focus {
+			+ .dropdown {
+				@extend .dropdown-show;
+			}
+		}
+	}
+
+}
