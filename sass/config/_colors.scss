@@ -1,5 +1,12 @@
 
-// base/colors
+$shades: (
+	'base': 0,
+	'dark': -5,
+	'darker': -15,
+	'light': 5,
+	'lighter': 15
+);
+
 $colors: (
 	"body":			#fafafa,
   	"text":			#3b3b3b,
@@ -7,9 +14,7 @@ $colors: (
 	"white":		#ffffff,
 	"black":		#000000,
 	"purple":		purple,
-	"whitegrey":	#f8f8f8,
-	"darkgrey":		#cacbcc,
-	"grey":			#eeeeee,
+	"grey":			#ededed,
 	"blue":			#2f4b7c,
 	"green":		#5cb85c,
 	"red":			#d9534f,

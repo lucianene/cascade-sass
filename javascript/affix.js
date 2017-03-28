@@ -20,7 +20,7 @@
 	Affix.prototype.options = {
 		selector: 		'[data-affix]',
 		pinnedClass: 	'affix',
-		offsetTop: 		50,
+		offsetTop: 		100,
 		offsetBottom: 	0,
 	};
 

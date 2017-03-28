@@ -13,20 +13,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @each $font, $size in $fonts {
+
+	// font sizes
 	.text-#{$font} {
 		font-size: $size !important;
 	}
+
+	// line heights
+	.line-#{$font} {
+		line-height: $size !important;
+	}
+
 }
 
+// headings
 @each $heading, $size in $headings {
 	#{$heading}, .#{$heading} {
 		@extend .text-#{$size}
-	}
-}
-
-@each $font, $size in $fonts {
-	.lh-#{$font} {
-		line-height: $size !important;
 	}
 }
 
@@ -38,20 +41,20 @@ hr {
 	width: 100%;
 	margin: 0 0 15px;
 	height: 0;
-	border: 1px solid color('grey');
+	border: 1px solid getColorByName('grey');
 	border-top: 0;
 	@include clearfix;
 }
 
 blockquote {
-	background-color: color('grey', 'light');
-	border: 2px dashed color('grey', 'dark');
+	background-color: getColorByName('grey', 'light');
+	border: 2px dashed getColorByName('grey', 'dark');
 	padding: 15px;
 	margin-bottom: 15px;
 }
 
 code {
-	@extend .whitegrey-bg;
+	// @extend .whitegrey-bg;
 }
 
 /*

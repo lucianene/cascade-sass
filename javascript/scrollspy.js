@@ -96,20 +96,11 @@
 				// add active class to the element in viewport
 				menuElement.classList.add(this.options.activeClassName);
 
-				// console.log(menuElement.parentElement.nextElementSibling);
-				// console.log(menuElement.parentNode.parentNode.nodeName);
-
 				if(menuElement.parentNode.parentNode.nodeName == 'UL') {
 					if(typeof menuElement.parentNode.parentNode.parentNode.firstChild.classList !== 'undefined') {
 						menuElement.parentNode.parentNode.parentNode.firstChild.classList.add(this.options.activeClassName);
 					}
 				}
-
-
-
-				// console.log(this._menuElements);
-
-				// console.log(this);
 
 			}
 

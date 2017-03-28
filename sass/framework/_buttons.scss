@@ -21,27 +21,37 @@
 		width: auto;
 	}
 
-	@each $button, $color in $colors {
-		&.btn-#{$button} {
-			background-color: color($button);
+
+	@each $colorName, $colorCode in $colors {
+
+		&.btn-#{$colorName} {
+
+			@extend .#{$colorName}-fill;
 			border: 1px solid transparent;
-			@if $button != 'grey' {
-				color: #fff;
-			}
+			color: #FFFFFF;
+
 			&:hover, &:focus {
-				border-color: color($button, 'dark');
+				@extend .dark-#{$colorName}-border;
 			}
 			&:active {
-				background-color: color($button, 'dark');
+				@extend .dark-#{$colorName}-fill;
 			}
+
 		}
-		&.btn-#{$button}-gradient {
-			@extend .btn-#{$button};
-			background: linear-gradient(color($button, 'light'),color($button, 'dark'));
+
+		&.btn-#{$colorName}-gradient {
+
+			@extend .#{$colorName}-gradient;
+			border: 1px solid transparent;
+			color: #FFFFFF;
+
 			&:active {
-				background: color($button, 'dark');
+				background-image: none;
+				@extend .dark-#{$colorName}-fill;
 			}
+
 		}
+
 	}
 
 	@each $name, $size in $fonts {

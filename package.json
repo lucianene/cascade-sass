@@ -2,8 +2,9 @@
   "name": "cascade-sass",
   "version": "0.0.1",
   "description": "Cascade sass framework.",
-  "main": "dist/cascade.css",
+  "main": "dist/cascade.js",
   "style": "dist/cascade.css",
+  "sass": "sass/cascade.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,9 +17,11 @@
     "type": "git",
     "url": "git://github.com/lucianene/cascade-sass.git"
   },
+  "bugs": {
+    "url": "https://github.com/lucianene/cascade-sass/issues"
+  },
   "dependencies": {
-    "animate.css": "*",
-    "jquery": "^3.1.1"
+    "animate.css": "*"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.6",

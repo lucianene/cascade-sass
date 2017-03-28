@@ -6,30 +6,30 @@
 @import "config/spacings";
 @import "config/typography";
 
-// @BASE
-@import "base/functions";
-@import "base/mixins";
-@import "base/_grid/grid-system-mixins";
-@import "base/_grid/grid-system";
-@import "base/_grid/grid-system-utils";
-@import "base/normalize";
-@import "base/colors";
-@import "base/typography";
-@import "base/spacings";
-@import "base/shadows";
+// @FUNCTIONS
+@import "framework/functions";
 
-// @COMPONENTS
-@import "components/form-fields";
-@import "components/buttons";
-@import "components/panels";
-@import "components/modal";
-@import "components/table";
-@import "components/media";
-@import "components/nav";
-@import "components/dropdown";
-@import "components/utilities";
+// @MIXINS
+@import "framework/mixins/utility-mixins";
+@import "framework/mixins/color-mixins";
+@import "framework/mixins/grid-mixins";
 
-// @VENDOR
+// @FRAMWEORK
+@import "framework/grid-system";
+@import "framework/normalize";
+@import "framework/colors";
+@import "framework/typography";
+@import "framework/spacings";
+@import "framework/shadows";
+@import "framework/form-fields";
+@import "framework/buttons";
+@import "framework/panels";
+@import "framework/modal";
+@import "framework/table";
+@import "framework/media";
+@import "framework/nav";
+@import "framework/dropdown";
+@import "framework/utilities";
+
+// // @VENDOR
 @import "../node_modules/animate.css/animate";
-
-@import "docs";

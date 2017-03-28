@@ -26,7 +26,6 @@ var setup = {
 		filename: "cascade.js",
 		min: { suffix: ".min" },
 		srcs: [
-			"node_modules/jquery/dist/jquery.slim.js",
 			"javascript/**/*.js"
 		]
 	}

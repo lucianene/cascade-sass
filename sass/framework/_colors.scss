@@ -1,0 +1,45 @@
+/**
+*
+* Compile colors based on shades
+*
+*
+*/
+
+@each $colorName, $colorCode in $colors {
+
+	@each $shade, $shadeValue in $shades {
+
+		.#{if($shade != 'base', $shade+'-', '')}#{$colorName}-text {
+			color: getColorByName($colorName, $shade);
+		}
+
+		.#{if($shade != 'base', $shade+'-', '')}#{$colorName}-text-hover {
+			&:hover {
+				@extend .#{if($shade != 'base', $shade+'-', '')}#{$colorName}-text;
+			}
+		}
+
+		.#{if($shade != 'base', $shade+'-', '')}#{$colorName}-fill {
+			background-color: getColorByName($colorName, $shade);
+		}
+
+		.#{if($shade != 'base', $shade+'-', '')}#{$colorName}-fill-hover {
+			&:hover {
+				@extend .#{if($shade != 'base', $shade+'-', '')}#{$colorName}-fill;
+			}
+		}
+
+		.#{if($shade != 'base', $shade+'-', '')}#{$colorName}-border {
+			border-color: getColorByName($colorName, $shade);
+		}
+
+	}
+
+	.#{$colorName}-gradient {
+		background: linear-gradient(
+			getColorByName($colorName, 'light'),
+			getColorByName($colorName, 'dark')
+		);
+	}
+
+}
