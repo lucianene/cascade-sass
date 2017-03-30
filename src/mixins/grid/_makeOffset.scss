@@ -1,0 +1,6 @@
+
+@mixin makeOffset($index, $screen) {
+  .col-#{$screen}-offset-#{$index} {
+      margin-left: percentage($index / $__GRID_COLUMNS);
+  }
+}

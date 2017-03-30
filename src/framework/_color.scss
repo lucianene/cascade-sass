@@ -1,0 +1,16 @@
+
+@each $colorName, $colorCode in $__COLORS {
+
+	@each $shade, $shadeValue in $__SHADES {
+
+    // make text color classes
+    @include makeText($colorName, $shade);
+
+    // make fill color classes
+    @include makeFill($colorName, $shade);
+
+	}
+
+  @include makeShadeGradient($colorName);
+
+}

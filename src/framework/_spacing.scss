@@ -1,0 +1,21 @@
+@each $index in $__SPACINGS {
+
+  /* Margin */
+  .m#{$index}  { margin: #{$index}px; }
+  .mt#{$index} { margin-top: #{$index}px; }
+  .mr#{$index} { margin-right: #{$index}px; }
+  .mb#{$index} { margin-bottom: #{$index}px; }
+  .ml#{$index} { margin-left: #{$index}px; }
+  .mv#{$index} { @extend .mt#{$index}; @extend .mb#{$index} }
+  .mh#{$index} { @extend .ml#{$index}; @extend .mr#{$index} }
+
+  /* Padding */
+  .p#{$index}  { padding: #{$index}px; }
+  .pt#{$index} { padding-top: #{$index}px; }
+  .pr#{$index} { padding-right: #{$index}px; }
+  .pb#{$index} { padding-bottom: #{$index}px; }
+  .pl#{$index} { padding-left: #{$index}px; }
+  .pv#{$index} { @extend .pt#{$index}; @extend .pb#{$index} }
+  .ph#{$index} { @extend .pl#{$index}; @extend .pr#{$index} }
+
+}

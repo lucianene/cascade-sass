@@ -1,0 +1,6 @@
+
+@mixin makeWidth($index, $screen) {
+  .col-#{$screen}-#{$index} {
+    width: percentage($index / $__GRID_COLUMNS);
+  }
+}

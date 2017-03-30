@@ -1,0 +1,20 @@
+
+@mixin makeGrid($screen, $width) {
+
+  @for $index from 1 through $__GRID_COLUMNS {
+
+    // Widths
+    @include makeWidth($index, $screen);
+
+    // Pushes
+    @include makePush($index, $screen);
+
+    // Offsets
+    @include makeOffset($index, $screen);
+
+  }
+
+  // Floats
+  @include makeFloats($screen);
+
+}

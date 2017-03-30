@@ -1,0 +1,23 @@
+
+@mixin makeColumns() {
+
+  // Begin with first screen and first index
+  $list: ".col-#{nth(nth($__GRID_SCREENS, 1), 1)}-1";
+  @each $screen, $width in $__GRID_SCREENS {
+
+    @for $index from (1 + 1) through $__GRID_COLUMNS {
+      $list: "#{$list}, .col-#{$screen}-#{$index}";
+    }
+
+  }
+
+  #{$list} {
+    position: relative;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    // Inner gutter via padding
+    padding-left:  ceil(($__GRID_GUTTER_WIDTH / 2));
+    padding-right: floor(($__GRID_GUTTER_WIDTH / 2));
+  }
+
+}

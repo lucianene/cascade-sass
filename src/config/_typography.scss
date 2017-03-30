@@ -1,0 +1,20 @@
+
+$__FONTS: (
+  'xs':  10px,
+  'sm':  12px,
+  'md':  14px,
+  'xmd': 16px, // 2
+  'lg':  18px,
+  'xlg': 22px,
+  'hg':  26px, // 4
+  'xhg': 34px, // 8
+);
+
+$__HEADINGS: (
+  'h1': 'xhg',
+  'h2': 'hg',
+  'h3': 'xlg',
+  'h4': 'lg',
+  'h5': 'xmd',
+  'h6': 'md',
+);

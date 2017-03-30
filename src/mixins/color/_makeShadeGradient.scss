@@ -1,0 +1,11 @@
+
+@mixin makeShadeGradient($colorName) {
+
+  .#{$colorName}-gradient {
+    background: linear-gradient(
+      getColorByName($colorName, 'light'),
+      getColorByName($colorName, 'dark')
+    );
+  }
+
+}

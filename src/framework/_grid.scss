@@ -1,0 +1,41 @@
+
+
+// CREATE GRID COLUMN NESTET PROPERTIES
+@include makeColumns();
+
+// CREATE GRIDS
+@each $screen, $width in $__GRID_SCREENS {
+
+  @media (min-width: $width) {
+    @include makeGrid($screen, $width);
+  }
+}
+
+
+// FLUID CONTAINER
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  floor(($__GRID_GUTTER_WIDTH / 2));
+  padding-right: ceil(($__GRID_GUTTER_WIDTH / 2));
+  @include clearfix;
+}
+
+// COMPUTED CONTAINER
+.container {
+  @extend .container-fluid;
+
+  @each $screen, $width in $__GRID_SCREENS {
+	  @media (min-width: $width) {
+	  	width: $width - $__GRID_GUTTER_WIDTH;
+	  }
+  }
+
+}
+
+// THE ROW
+.row {
+  margin-left:  ceil(($__GRID_GUTTER_WIDTH / -2));
+  margin-right: floor(($__GRID_GUTTER_WIDTH / -2));
+  @include clearfix;
+}

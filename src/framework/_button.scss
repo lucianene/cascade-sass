@@ -1,0 +1,71 @@
+
+.btn {
+
+  // default configuration
+  display: block;
+  text-align: center;
+  text-decoration: none !important;
+  outline: 0;
+  line-height: 2em;
+  min-height: 2em;
+  cursor: pointer;
+  padding-left: .5em; // same as dividing the font size by 2
+  padding-right: .5em;
+  appearance: inherit !important;
+  border-radius: 2px;
+  background: none;
+
+  // force inline button
+  &.btn-inline {
+    display: inline-block;
+    width: auto;
+  }
+
+
+  @each $colorName, $colorCode in $__COLORS {
+
+    &.btn-#{$colorName} {
+
+      @extend .#{$colorName}-fill;
+      border: 1px solid transparent;
+      color: #FFFFFF;
+
+      &:active {
+        @extend .dark-#{$colorName}-fill;
+      }
+
+    }
+
+    &.btn-#{$colorName}-gradient {
+
+      @extend .#{$colorName}-gradient;
+      border: 1px solid transparent;
+      color: #FFFFFF;
+
+      &:active {
+        background-image: none;
+        @extend .dark-#{$colorName}-fill;
+      }
+
+    }
+
+  }
+
+  @each $name, $size in $__FONTS {
+    &.btn-#{$name} {
+      @extend .text-#{$name};
+    }
+  }
+
+  .fa {
+    min-width: 1.5em;
+  }
+
+}
+
+// fix extra padding on buttons
+button {
+  &.btn {
+    line-height: 0;
+  }
+}

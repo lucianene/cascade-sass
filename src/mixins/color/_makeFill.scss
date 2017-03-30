@@ -1,0 +1,14 @@
+
+@mixin makeFill($colorName, $shade) {
+
+  .#{if($shade != 'base', $shade+'-', '')}#{$colorName}-fill {
+    background-color: getColorByName($colorName, $shade);
+  }
+
+  .#{if($shade != 'base', $shade+'-', '')}#{$colorName}-fill-hover {
+    &:hover {
+      @extend .#{if($shade != 'base', $shade+'-', '')}#{$colorName}-fill;
+    }
+  }
+
+}

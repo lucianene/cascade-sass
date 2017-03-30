@@ -1,0 +1,12 @@
+
+@mixin makeFloats($screen, $index: 1, $list: ".col-#{$screen}-#{$index}") {
+
+  @for $index from (1 + 1) through $__GRID_COLUMNS {
+    $list: "#{$list}, .col-#{$screen}-#{$index}";
+  }
+
+  #{$list} {
+    float: left;
+  }
+
+}

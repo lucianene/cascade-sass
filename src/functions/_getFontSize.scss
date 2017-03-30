@@ -1,0 +1,10 @@
+
+@function getFontSize($size) {
+
+	@if map-has-key($fonts, $size) {
+		@return map-get($fonts, $size);
+	}
+	@warn "Unknown `#{size}` in $fonts.";
+	@return null;
+
+}

@@ -1,0 +1,30 @@
+
+@function getColorByName($color, $shade: 'base') {
+
+	@if map-has-key($__COLORS, $color) == false {
+
+		@warn "Unknown `#{color}` in $__COLORS.";
+		@return null;
+
+	}
+
+	@if map-has-key($__SHADES, $shade) == false {
+
+		@warn "Unknown `#{shade}` in $__COLORS.";
+		@return null;
+
+	}
+
+	// if is negative number, darken
+	@if map-get($__SHADES, $shade) < 0 {
+
+		@return darken(map-get($__COLORS, $color), percentage(map-get($__SHADES, $shade) / -100));
+
+	// else lighten
+	} @else {
+
+		@return lighten(map-get($__COLORS, $color), percentage(map-get($__SHADES, $shade) / 100));
+
+	}
+
+}

@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
 	min-height: 2em;
 }
 
-@each $font, $size in $fonts {
+@each $font, $size in $__FONTS {
 
 	// font sizes
 	.text-#{$font} {
@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // headings
-@each $heading, $size in $headings {
+@each $heading, $size in $__HEADINGS {
 	#{$heading}, .#{$heading} {
 		@extend .text-#{$size}
 	}
@@ -52,22 +52,6 @@ blockquote {
 	padding: 15px;
 	margin-bottom: 15px;
 }
-
-code {
-	// @extend .whitegrey-bg;
-}
-
-/*
-code {
-	border: 2px dashed color('green', 'light');
-	overflow: hidden;
-	clear: both;
-	width: 100%;
-	display: block;
-	padding: 15px;
-	margin-bottom: 15px;
-}
-*/
 
 kbd {
 	background: #111;

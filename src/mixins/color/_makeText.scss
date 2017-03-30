@@ -1,0 +1,14 @@
+
+@mixin makeText($colorName, $shade) {
+
+  .#{if($shade != 'base', $shade+'-', '')}#{$colorName}-text {
+    color: getColorByName($colorName, $shade);
+  }
+
+  .#{if($shade != 'base', $shade+'-', '')}#{$colorName}-text-hover {
+    &:hover {
+      @extend .#{if($shade != 'base', $shade+'-', '')}#{$colorName}-text;
+    }
+  }
+
+}

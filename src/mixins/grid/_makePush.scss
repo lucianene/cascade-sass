@@ -1,0 +1,11 @@
+
+@mixin makePush($index, $screen) {
+  .col-#{$screen}-push-#{$index} {
+    @if $index == 0 {
+      left: auto;
+    }
+    @else {
+      left: percentage($index / $__GRID_COLUMNS);
+    }
+  }
+}
