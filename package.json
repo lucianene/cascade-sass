@@ -1,6 +1,6 @@
 {
   "name": "cascade-sass",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cascade sass framework.",
   "main": "dist/gulpfile.js",
   "style": "dist/cascade.css",
